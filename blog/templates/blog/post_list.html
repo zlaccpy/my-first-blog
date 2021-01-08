@@ -1,14 +1,10 @@
-<html>
-<head>
-	<title>Ez egy teszt blog</title>
-</head>
-<body>
-	<h1><a href="/">Teszt blog</a></h1>
+{% extends 'blog/base.html' %}
+{% block content %}
 {% for post in posts %}
-	<div>
+	<div class="w3-card w3-padding w3-margin-bottom w3-round-large">
 		<p>published: {{post.published_date}}</p>
-		<h2><a href="">{{post.title}}</a></h2>
-		<p>{{post.text|linebreaksbr}}</p>
+		<h2><a href="{% url 'post_detail' pk=post.pk %}">{{post.title}}</a></h2>
+		<div class="w3-large">{{post.text|linebreaksbr}}</div>
 	</div>
 {% endfor %}
-</body>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% load static %}
+<html>
+<head>
+	<title>Ez egy teszt blog</title>
+	 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	 <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+	 <style>
+	 </style>
+</head>
+<body class="w3-container">
+	<h1 class="w3-center w3-card-4 w3-gray w3-padding-large w3-round"><a href="/">Teszt blog</a></h1>
+
+	{% block content %}
+	{% endblock %}
+
+</body>
+</html>

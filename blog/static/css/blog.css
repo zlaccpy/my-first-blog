@@ -1,0 +1,8 @@
+a {
+	color: blue;
+	border-bottom: solid 1px;
+}
+a:hover {
+	color: green;
+	text-decoration: none;
+}
