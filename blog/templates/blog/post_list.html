@@ -1,1 +1,14 @@
-<h1>Hi, there!</h1>
+<html>
+<head>
+	<title>Ez egy teszt blog</title>
+</head>
+<body>
+	<h1><a href="/">Teszt blog</a></h1>
+{% for post in posts %}
+	<div>
+		<p>published: {{post.published_date}}</p>
+		<h2><a href="">{{post.title}}</a></h2>
+		<p>{{post.text|linebreaksbr}}</p>
+	</div>
+{% endfor %}
+</body>
